@@ -1,0 +1,157 @@
+@import url('https://fonts.cdnfonts.com/css/geometria');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Geometria', sans-serif;
+}
+
+body {
+  width: 390px;
+  font-family: 'Geometria', sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  height: 710px;
+  width: 100%;
+  background-size: cover;
+  background-image: url(https://s3-alpha-sig.figma.com/img/d775/08fc/9f89e62a8cde7bb9b8c419c8853113b8?Expires=1707696000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=CM63XkTyOVoVEFBH-6rOxJw7Sds-g1x3KItCv1ilMaCFE0~LV~1zSaHNZaW2SqPGVx3CIxPQKt9OwC2qwQGDS5~LNXCG-wGSxRbM0uFelqGt6KU4b9BJQSokZp6H0LRkb4quq7bH~X3JF1MlenrdQ19VO2tZdI-aS0CUN3JyRgVFVohEldz5FAfIte44DxMQ0a05HMejYqiXKuOmw1~kX~ktTllX9Xw~awbmNZOG9Q6xPkwPl~O34uIJ9rMiKxirxpZrBHeMxyypdMPwNbrjgIqE6I9f0eOOk91vimy3XOnRyT~V3-5-oi~-xHo20lNCNUy~TVg4V1vMjNMbzttvkg__);
+}
+
+header img {
+  width: inherit;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  font-size: 36px;
+  color: #FFDFF0;
+}
+
+.title-left {
+  margin-right: 10px;
+  padding: 10px;
+  border: 2.8px solid #FFDFF0;
+  border-radius: 20px;
+}
+
+.banner {
+  width: 344px;
+  padding: 5px;
+  border-radius: 20px;
+  color: #5A3282;
+  font-size: 30px;
+  text-align: center;
+  background: linear-gradient(135.62deg, #E0E0E0 5.14%, #FFDAFB 20.17%, #E0E0E0 35.67%, #FFDAFB 50.23%, #E0E0E0 65.73%, #FFDAFB 79.82%, #E0E0E0 95.32%);
+  /* background-image: url(https://s3-alpha-sig.figma.com/img/a3b2/0041/19477600f68ece3a4300acdfef208c27?Expires=1707696000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=FRQ10~gs9P43D~Y5jriMcw0qZf3aJ-4YpugUacXzL4hzAF6n8a86SonD4zdkOtxZeJdRglCQZPnDOranNcstNCpgX-T0h~QE7dsmV7kdCl2pGMcAaOULYH99uLEDSLX0IwmU6vhkbDKith1IQkWFufYDj28voif~3C9RR3ONHmzj6YWUBY0hUJh2Q2QeUYvNIiMhbLB0XBACEzNdTBhUq658l-bTnTTQKevfjaLvFseSDLBLTIoFCJISYZXA8xoUBHVMBEV9ppfCWoJiN4K0~RXleDuDx402etxjyCtHP0UYSCLIiEBvjPVhnbTB7m~DHG~5H5TFlFvrmong95dJJQ__); */
+}
+
+.banner span {
+  font-weight: 600;
+}
+
+main {
+  background: #221232;
+}
+
+.result-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(135.62deg, #E0E0E0 5.14%, #FFDAFB 20.17%, #E0E0E0 35.67%, #FFDAFB 50.23%, #E0E0E0 65.73%, #FFDAFB 79.82%, #E0E0E0 95.32%);
+  border-radius: 25px 25px 0px 0px;
+}
+
+#progress-bar {
+  width: 350px;
+  height: 49px;
+  background-color: #221232;
+  position: relative;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+#progress-count {
+  color: #FFE2E7;
+  font-size: 26px;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#progress-fill {
+  height: 100%;
+  background: linear-gradient(180deg, #CF1F74 0%, #EC4F74 50.52%, #CF1F74 100%);
+}
+
+#new-game-btn {
+  width: 206px;
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 32px;
+  font-weight: bold;
+  cursor: pointer;
+  background: linear-gradient(136.38deg, #854AAA 5.28%, #BD78C9 20.78%, #854AAA 34.87%, #4D2680 50.37%, #854AAA 65.88%, #B97EC8 80.44%, #854AAA 95.47%);
+  color: #FFE2E7;
+  border: none;
+  border-radius: 25px;
+}
+
+.hidden {
+  opacity: 50%;
+}
+
+#game-container {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+}
+
+.card {
+  width: 161px;
+  height: 225px;
+  margin: 10px;
+  background-color: #ccc;
+  position: relative;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+footer {
+  background: #623186;
+  text-align: center;
+}
+
+footer h2 {
+  color: #FDEACE;
+}
+
+.terms {
+  display: flex;
+  justify-content: space-around;
+  color: #F76487;
+  font-size: 18px;
+  font-weight: 400;
+
+}
+
+.info {
+  font-size: 8px;
+  color: #FFFFFF;
+  opacity: 10%;
+}
