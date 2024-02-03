@@ -48,7 +48,6 @@ header img {
   font-size: 30px;
   text-align: center;
   background: linear-gradient(135.62deg, #E0E0E0 5.14%, #FFDAFB 20.17%, #E0E0E0 35.67%, #FFDAFB 50.23%, #E0E0E0 65.73%, #FFDAFB 79.82%, #E0E0E0 95.32%);
-  /* background-image: url(https://s3-alpha-sig.figma.com/img/a3b2/0041/19477600f68ece3a4300acdfef208c27?Expires=1707696000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=FRQ10~gs9P43D~Y5jriMcw0qZf3aJ-4YpugUacXzL4hzAF6n8a86SonD4zdkOtxZeJdRglCQZPnDOranNcstNCpgX-T0h~QE7dsmV7kdCl2pGMcAaOULYH99uLEDSLX0IwmU6vhkbDKith1IQkWFufYDj28voif~3C9RR3ONHmzj6YWUBY0hUJh2Q2QeUYvNIiMhbLB0XBACEzNdTBhUq658l-bTnTTQKevfjaLvFseSDLBLTIoFCJISYZXA8xoUBHVMBEV9ppfCWoJiN4K0~RXleDuDx402etxjyCtHP0UYSCLIiEBvjPVhnbTB7m~DHG~5H5TFlFvrmong95dJJQ__); */
 }
 
 .banner span {
@@ -57,6 +56,7 @@ header img {
 
 main {
   background: #221232;
+  position: relative;
 }
 
 .result-block {
@@ -118,45 +118,17 @@ main {
 .card {
   width: 161px;
   height: 225px;
-  margin: 10px;
-  /* background-color: #ccc;
+  margin: 17px;
   position: relative;
-  cursor: pointer;
-  border-radius: 20px; */
-  /* background-image: url('scratch.png'); */
-
-
-  position: relative;
-  /* overflow: hidden; */
+  overflow: hidden;
   border-radius: 25px;
 }
-
-/* .card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-
-
-  display: block;
-  width: 100%;
-  height: auto;
-} */
 
 .top {
   position: absolute;
   top: 0;
-  width: 161px;
-  height: 225px;
   border-radius: 25px;
   z-index: 1;
-  /* left: 0;
-  z-index: 2;
-
-  cursor: pointer;
-  overflow: hidden;
-  background-image: url('scratch.png');
-  width: 100%;
-  height: 100vh; */
 }
 
 .bottom {
@@ -167,6 +139,102 @@ main {
   border-radius: 25px;
 }
 
+.visibility {
+  display: none !important;
+}
+
+.modal-empty,
+.modal-part,
+.modal-all {
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 390px;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.popup-empty,
+.popup-part,
+.popup-all {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 344px;
+  height: 245px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.popup-empty {
+  background: linear-gradient(116.9deg, #FF6948 0%, #FF8B8B 24.48%, #FF6948 48.96%, #FFBD80 75%, #FF6948 100%);
+  box-shadow: 0px 9px 15px 2px #2E18158A;
+}
+
+.popup-part {
+  background: linear-gradient(116.9deg, #88FF5F 0%, #BAFFA2 24.48%, #BAFFA2 48.96%, #9FF136 75%, #88FF5F 100%);
+  box-shadow: 0px 9px 15px 2px #2E18158A;
+}
+
+.popup-all {
+  background: linear-gradient(116.9deg, #9DDCFF 0%, #74BBFC 25%, #9DDCFF 50%, #CFFFFF 77.6%, #9DDCFF 100%);
+  box-shadow: 0px 9px 15px 2px #2E18158A;
+}
+
+.popup-empty-title,
+.popup-all-title {
+  font-size: 48px;
+  color: #221232;
+  font-weight: 500;
+}
+
+.popup-part-title {
+  font-size: 30px;
+  color: #221232;
+  font-weight: 500;
+}
+
+.popup-empty-text,
+.popup-part-text,
+.popup-all-text {
+  font-size: 22px;
+  font-weight: 400;
+  color: #221232;
+  padding: 20px;
+}
+
+.popup-empty-btn,
+.popup-part-btn {
+  background-color: #fff;
+  border-radius: 50px;
+  color: #221232;
+  border: none;
+  width: 246px;
+  height: 57px;
+  font-size: 34px;
+  font-weight: 400;
+}
+
+.popup-all-btn {
+  background: linear-gradient(116.9deg, #88FF5F 0%, #BAFFA2 24.48%, #BAFFA2 48.96%, #9FF136 75%, #88FF5F 100%);
+  border-radius: 50px;
+  color: #221232;
+  border: none;
+  width: 246px;
+  height: 57px;
+  font-size: 34px;
+  font-weight: 700;
+}
+
 footer {
   background: #623186;
   text-align: center;
@@ -174,6 +242,7 @@ footer {
 
 footer h2 {
   color: #FDEACE;
+  padding: 20px;
 }
 
 .terms {
@@ -182,11 +251,54 @@ footer h2 {
   color: #F76487;
   font-size: 18px;
   font-weight: 400;
-
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .info {
   font-size: 8px;
   color: #FFFFFF;
   opacity: 10%;
+  padding: 20px;
+}
+
+.read-btn {
+  border: 0.68px solid #FFFFFF;
+  background-color: transparent;
+  color: white;
+  opacity: 10%;
+  padding: 10px;
+  font-size: 10px;
+}
+
+#more {
+  display: none;
+}
+
+.bottom-block {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+}
+
+.title-bottom {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  color: #FFDFF0;
+  opacity: 50%;
+}
+
+.title-left-bottom {
+  margin-right: 10px;
+  padding: 7px;
+  border: 2.8px solid #FFDFF0;
+  border-radius: 20px;
+}
+
+.copyright {
+  font-size: 17px;
+  color: #FDEACE;
+  opacity: 50%;
 }
