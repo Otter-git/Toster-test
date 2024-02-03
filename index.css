@@ -119,18 +119,53 @@ main {
   width: 161px;
   height: 225px;
   margin: 10px;
-  background-color: #ccc;
+  /* background-color: #ccc;
   position: relative;
   cursor: pointer;
-  border-radius: 20px;
+  border-radius: 20px; */
+  /* background-image: url('scratch.png'); */
+
+
+  position: relative;
+  /* overflow: hidden; */
+  border-radius: 25px;
 }
 
-.card img {
+/* .card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+
+
+  display: block;
+  width: 100%;
+  height: auto;
+} */
+
+.top {
+  position: absolute;
+  top: 0;
+  width: 161px;
+  height: 225px;
+  border-radius: 25px;
+  z-index: 1;
+  /* left: 0;
+  z-index: 2;
+
+  cursor: pointer;
+  overflow: hidden;
+  background-image: url('scratch.png');
+  width: 100%;
+  height: 100vh; */
 }
 
+.bottom {
+  display: block;
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+  border-radius: 25px;
+}
 
 footer {
   background: #623186;
