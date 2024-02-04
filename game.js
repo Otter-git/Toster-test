@@ -2,10 +2,10 @@ const cards = [
   { value: 25 },
   { value: 25 },
   { value: 50 },
-  { value: 100 },
+  { value: 50 },
+  { value: 50 },
   { value: 100 },
   { value: 200 },
-  { value: 0 },
   { value: 0 },
   { value: 0 },
   { value: 0 },
@@ -221,7 +221,7 @@ function updateScore(value) {
 // Check if the game is over
 function checkGameEnd() {
 
-  if (selectedCards.length >= 6) {
+  if (selectedCards.length >= 7) {
 
     const emptyBtn = document.querySelector('.popup-empty-btn');
     const partBtn = document.querySelector('.popup-part-btn');
